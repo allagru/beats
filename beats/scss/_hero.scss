@@ -1,0 +1,41 @@
+.hero {
+    // background: url(../../img/earph.png) right 30% bottom no-repeat;
+    background-color: $light-gray;
+    height: 100vh;
+    min-height: 650px;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        bottom: -25px;
+        right: 22%;
+        content: url(/beats/img/rectangle.png);
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        padding: 24px 23px 65px 0;
+        background: url(/beats/img/earph.png) right 5% center no-repeat;
+    }
+
+    &__title-section {
+        width: 46%;
+    }
+
+    &__main-title {
+        font-size: 48px;
+        font-weight: bold;
+        line-height: 52px;
+        margin-bottom: 27px;
+        text-transform: uppercase;
+    }
+
+    &__title-text {
+        font-style: 21px;
+        margin-bottom: 42px;
+        padding-right: 25%;
+    }
+}

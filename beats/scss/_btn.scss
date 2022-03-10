@@ -1,0 +1,43 @@
+.btn {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 18px 41px;
+    border-radius: 100px;
+    line-height: 1;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+
+    &--red {
+        background: $red;
+        color: $white;
+
+        &:hover {
+            background: $darkred;
+        }
+    }
+
+    &--darkred {
+        background: $darkred;
+        color: $white;
+
+        &:hover {
+            background: $red;
+        }
+    }
+
+    &--transparent {
+        background: transparent;
+        color: $white;
+        text-transform: none;
+        font-weight: normal;
+        padding: 18px 8px;
+
+        &:hover {
+            color: #000;
+        }
+    }
+
+}

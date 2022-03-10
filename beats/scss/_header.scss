@@ -1,0 +1,36 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-menu__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-menu__item {
+    font-family: 'Alegreya Sans', Helvetica, sans-serif;
+    margin-right: 30px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.telephone {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.telephone__icon-elem {
+    width: 14px;
+    height: 14px;
+    margin-right: 6px;
+}
+
+.nav-menu__link {
+    text-decoration: none;
+}
