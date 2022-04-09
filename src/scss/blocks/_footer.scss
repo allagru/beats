@@ -1,0 +1,107 @@
+.footer {
+
+    background: $white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: rem(20px) 0;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        min-height: rem(86px);
+
+        @include phones {
+            flex-direction: column;
+        }
+    }
+
+    &__col {
+        display: flex;
+        align-items: center;
+
+        &--align--right {
+            justify-content: flex-end;
+        }
+    }
+
+    &__telephone {
+        @include tablets {
+            color: $red;
+            width: rem(12px);
+            height: rem(12px);
+        }
+
+        @include phones {
+            color: $black;
+        }
+    }
+}
+
+.social {
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        margin-right: rem(2px);
+    }
+
+    &__item {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: rem(11px);
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__icon {
+        width: rem(30px);
+        height: rem(30px);
+        color: #B3B3B3;
+
+        &:hover {
+            color: #000;
+            transition: .3s;
+        }
+    }
+}
+
+
+.contacts {
+    font-size: rem(18px);
+    font-style: normal;
+
+    @include phones {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__address { 
+        margin-bottom: rem(5px);
+
+        @include tablets {
+            font-size: rem(21px);
+        }
+
+        @include phones {
+            font-size: rem(18px);
+            margin-bottom: rem(12px);
+        }
+    }
+
+    &__telephone {
+        @include tablets {
+            color: $red;
+        }
+
+        @include phones {
+            color: $black;
+            font-size: rem(16px);
+            margin-bottom: rem(19px);
+        }
+    }
+}

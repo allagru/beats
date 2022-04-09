@@ -1,0 +1,301 @@
+.shop-section {
+    background: #F8FAF9;
+    position: relative;
+    
+
+    &::before {
+        position: absolute;
+        bottom: rem(-25px);
+        right: 18%;
+        content: url(/beats/src/img/Rectangle1.png);
+    }
+}
+
+.shop-container{
+    .bx-wrapper {
+        border: 0;
+        background: #F8FAF9;
+        box-shadow: none;
+        margin-bottom: 0;
+        @include tablets {
+            .bx-viewport {
+                height: 615px;
+            }
+        }
+        
+    }
+}
+
+
+
+.shop-section{
+
+    @include tablets{
+        padding-top: 3%;
+    }
+
+    @include phones{
+        padding-top: 5%;
+    }
+}
+
+.shop__item{
+    position: relative;
+   
+}
+
+.shop__controls{
+    display: block;
+    position: relative;
+    top: 50%;
+    @include tablets {
+        top: 23%;
+        // right: 5%;
+    }
+    @include phones {
+        top: 21%;
+    }
+}
+
+.shop__btn{
+    position: absolute;
+    
+    z-index: 10;
+    &_right{
+        right: rem(1px);
+        transform: rotate(180deg);
+
+        @include tablets {
+            right: 17%;
+        }
+       
+        @include phones {
+            right: -2%;
+        }
+    }
+    &_left{
+        left:rem(-50px);
+        // transform: rotate(135deg);
+        @include tablets {
+            left: 18%;
+        }       
+        @include phones {
+            left: -2%;
+        }
+    }
+}
+
+
+.shop{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    @include tablets{
+        flex-direction: column;
+    }
+
+    &__picture{
+        margin-right: 60px;
+        position: relative;
+        width: rem(452px);
+        height: rem(452px);
+        @include tablets{
+            width: rem(306px);
+            height: rem(306px);
+            margin: 0 auto;
+            margin-bottom: 49px;
+        }
+        @include phones {
+            width: rem(306px);
+            height: auto;
+            margin-bottom: rem(30px);
+        }
+
+    }
+
+    &__menu{
+
+        display: flex;
+        justify-content: center;
+        width: 91px;
+        height: 91px;
+        background-color: #9A9A9A;
+        border-radius: 4px;
+        margin-bottom: rem(25px);
+        
+        @include tablets{
+            display: none;
+        }
+
+    }
+
+    &__icon--gear{
+        width: 50%;
+        fill: white;
+    }
+
+    &__column{
+        width: 50%;
+        flex-direction: column;
+        align-content: space-between;
+        @include tablets{
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-bottom: rem(50px);
+        }
+    }
+
+    &__title{
+        max-width: rem(419px);
+        text-transform: uppercase;
+        color: $black;
+        font-size: rem(36px);
+        line-height: rem(42px);
+        margin-bottom: rem(24px);
+        font-weight: bold;
+        @include tablets{
+            font-size: rem(28px);
+            max-width: 100%;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        @include phones {
+            font-size: 28px;
+            line-height: 32px;
+            margin-bottom: rem(15px);
+            max-width: 72%;
+        }
+    }
+
+    &__text {
+        padding-right: 15%;
+
+        @include tablets{
+            padding-right: 0;
+            max-width: rem(620px);
+        }
+        @include phones {
+            max-width: rem(400px);
+        }
+    }
+
+    
+    &__row{
+        margin: rem(27px) 0 rem(27px) 0;
+        @include phones {
+            margin: rem(15px) 0;
+        }
+    }
+
+    &__description{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-bottom: rem(27px);
+        padding-right: 30%;
+        @include tablets {
+            text-align: left;
+            padding: 0 30%;
+            width: 100%;
+            margin: rem(27px) 0 rem(20px) 0;
+        }
+        @include phones{
+            padding: 0 11% 0 22%;
+        }
+    }
+
+    &__purchase{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        @include tablets {
+            margin: 0;
+        }
+    }
+
+    &__price{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 36px;
+        line-height: 60px;
+        color: #151515;
+        margin-right: rem(13px);
+        @include tablets {
+            font-size: 40px;
+            margin-right: rem(40px);
+        }
+        @include phones {
+            font-size: 32px;
+            margin-left: rem(5px);
+            margin-right: rem(20px);
+        }
+    }
+}
+
+.description{
+    width: 50%; 
+    @include tablets{
+        margin-left: rem(20px);
+    }  
+    @include phones {
+        margin-left: 0;
+    }
+}
+
+.description__title{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color:$gray;
+    margin-bottom: 2px;
+} 
+
+.decsription__text{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000;
+}
+
+
+.gear{
+    position: relative;
+    &:hover {
+        .gear__list {
+            left: 100%;
+            opacity: 1;
+        }
+    }
+    .gear__list {
+        position: absolute;
+        top: 0;
+        left: -9999px;
+        opacity: 0;
+        background: #ffffff;
+        padding: 15px 27px 15px 12px;
+        transition: opacity 0.3s;
+    }
+    .gear__item{
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .gear__icon{
+        width: 32px;
+        height: 32px;
+        margin-right: 12px;
+    }
+    .gear__text {
+        min-width: 130px;
+    }
+    .gear__number {
+        margin-left: auto;
+    }
+}

@@ -1,0 +1,53 @@
+.radio {
+    display: flex;
+    cursor: pointer;
+    user-select: none;
+    margin-bottom: rem(20px);
+
+    &__title {
+        padding: rem(0px) rem(10px);
+    }
+
+    &--checkbox {
+        .radio__visible {
+            border-radius: 0;
+
+            &::before {
+                background: url(/beats/src/img/checkmark.png) center center no-repeat;
+            }
+        }
+
+        margin-bottom: rem(40px);
+    }
+
+    &__elem {
+        display: none;
+
+        &:checked ~ .radio__visible {
+            &::before {
+                display: block;
+            }
+        }
+    }
+
+    &__visible {
+        width: rem(25px);
+        height: rem(25px);
+        position: relative;
+        border-radius: 50%;
+        background: $white;
+
+        &::before {
+            content: "";
+            width: rem(13px);
+            height: rem(13px);
+            background: $red;
+            border-radius: 50%;
+            position: absolute;
+            display: none;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}

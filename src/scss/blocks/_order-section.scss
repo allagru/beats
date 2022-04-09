@@ -1,0 +1,19 @@
+.order-section {
+    background: url(/beats/src/img/bg_form.png) bottom center no-repeat;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        top: rem(-25px);
+        right: 19%;
+        content: url(/beats/src/img/Polygon.png);
+    }
+
+    @include tablets {
+        padding: 5% 0;
+    }
+
+    @include phones {
+        padding: 10% 0;
+    }
+}

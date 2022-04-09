@@ -1,0 +1,46 @@
+$containerWidth: 940px;
+$baseFontSize: 16px;
+
+
+//breakpoints
+$tablets: 768px;
+$phones: 480px;
+
+$gray: #666666;
+$red: #E01F3D;
+$darkred: #CA1B36;   
+$black: #292929;
+$white: #fff;
+$light-gray: #F5F5F5;
+
+$z-fixed-menu: 100;
+@import '../scss/blocks/_media.scss';
+@import url(/beats/src/css/normalize.css);
+
+@import '../scss/blocks/_base.scss';
+@import '../scss/blocks/_hero.scss';
+@import '../scss/blocks/_header.scss';
+@import '../scss/blocks/_features.scss';
+@import '../scss/blocks/_feature.scss';
+@import '../scss/blocks/_btn.scss';
+@import '../scss/blocks/_section.scss';
+@import '../scss/blocks/_headline.scss';
+@import '../scss/blocks/_benefits.scss';
+@import '../scss/blocks/_benefit.scss';
+@import '../scss/blocks/_benefits-section.scss';
+@import '../scss/blocks/_reviews.scss';
+@import '../scss/blocks/_interactive-avatar.scss';
+@import '../scss/blocks/_reviews-section.scss';
+@import '../scss/blocks/_order-section.scss';
+@import '../scss/blocks/_form.scss';
+@import '../scss/blocks/_radio.scss';
+@import '../scss/blocks/_map-section.scss';
+@import '../scss/blocks/_footer.scss';
+@import '../scss/blocks/_fixed-menu.scss';
+@import '../scss/blocks/_burger.scss';
+@import '../scss/blocks/_shop-section.scss';
+@import '../scss/blocks/_hide-menu.scss';
+@import '../scss/blocks/_team.scss';
+@import '../scss/blocks/_modal.scss';
+@import '../scss/blocks/_video.scss';
+@import '../scss/blocks/_menu-acco.scss';

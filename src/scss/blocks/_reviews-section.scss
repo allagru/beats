@@ -1,0 +1,18 @@
+.reviews-section {
+    position: relative;
+
+    &::before {
+        position: absolute;
+        bottom: rem(-25px);
+        left: 19%;
+        content: url(/beats/src/img/round.png);
+    }
+
+    &__title {
+        margin-bottom: rem(30px);
+
+        @include phones {
+            font-size: rem(32px);
+        }
+    }
+}

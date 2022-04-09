@@ -1,0 +1,51 @@
+.btn {
+    font-size: rem(16px);
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: rem(18px) rem(41px);
+    border-radius: rem(100px);
+    line-height: 1;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+
+    &--red {
+        background: $red;
+        color: $white;
+
+        &:hover {
+            background: $darkred;
+            transition: .3s;
+        }
+    }
+
+    &--darkred {
+        background: $darkred;
+        color: $white;
+
+        &:hover {
+            background: $red;
+            transition: .3s;
+        }
+    }
+
+    &--transparent {
+        background: transparent;
+        color: $white;
+        text-transform: none;
+        font-weight: normal;
+        padding: rem(18px) rem(8px);
+
+        &:hover {
+            color: #000;
+            transition: .3s;
+        }
+
+        @include tablets {
+            color: $red;
+            padding-left: rem(30px);
+        }
+    }
+
+}

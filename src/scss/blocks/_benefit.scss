@@ -1,0 +1,50 @@
+.benefit {
+    text-align: center;
+
+    @include phones {
+        display: flex;
+        text-align: left;
+    }
+
+    &__image-wrapper {
+        display: inline-block;
+        width: rem(128px);
+        height: rem(128px);
+        position: relative;
+        background: #F2F5F4;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-bottom: rem(24px);
+
+        @include phones {
+            margin-bottom: 0;
+        }
+    }
+
+    &__icon {
+        width: rem(68px);
+        height: rem(68px);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__title {
+        font-size: rem(24px);
+        font-weight: bold;
+        margin-bottom: rem(7px);
+
+    }
+
+    &__desc {
+        font-size: rem(16px);
+        color: $gray;
+    }
+
+    &__text {
+        @include phones {
+            padding: rem(14px) 0 0 rem(10px);
+        }
+    }
+}

@@ -1,0 +1,17 @@
+.benefits-section {
+    position: relative;
+
+    &::before {
+        position: absolute;
+        bottom: rem(-25px);
+        left: 18%;
+        content: url(/beats/src/img/triangle.png);
+        z-index: 100;
+    }
+
+    &__container {
+        @include tablets{
+            width: 99%;      
+        }
+    }
+}
