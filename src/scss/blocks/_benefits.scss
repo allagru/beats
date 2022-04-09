@@ -16,7 +16,7 @@
         }
 
         &::before {
-            content: url(/beats/src/img/shape.png);
+            content: url(../../img/shape.png);
             position: absolute;
             top: rem(60px);
             right: 0;

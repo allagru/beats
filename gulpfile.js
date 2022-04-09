@@ -22,10 +22,20 @@ task ("copy:html", () => {
         .pipe(dest('dist'))
         .pipe(reload({ stream: true }));
     });
+task ("copy:images", () => {
+    return src('src/img//*.*')
+        .pipe(dest('dist/img'))
+        .pipe(reload({ stream: true }));
+    });
+task ("copy:svg", () => {
+    return src('src/svg//*.*')
+        .pipe(dest('dist/svg'))
+        .pipe(reload({ stream: true }));
+    });
 
 const styles = [
     "node_modules/normalize.css/normalize.css",
-    "beats/scss/main.scss"
+    "src/scss/main.scss"
 ];
 
 task ("styles", () => {
@@ -34,27 +44,29 @@ task ("styles", () => {
       .pipe(concat('main.scss'))
       .pipe(sassGlob())
       .pipe(sass().on('error', sass.logError))
-      .pipe(px2rem())
+    //   .pipe(px2rem())
       .pipe(autoprefixer({
         cascade: false
     }))
     //   .pipe(gcmq())
       .pipe(cleanCSS())
-      .pipe(uglify())
+    //   .pipe(uglify())
       .pipe(sourcemaps.write())
       .pipe(dest('dist'));
 });
 
 task('scripts', () => {
-    return src("beats/js/*.js")
+    return src("src/js/*.js")
         .pipe(sourcemaps.init())
         .pipe(concat('main.js', {newLine: ";"}))
         .pipe(babel({
             presets: ['@babel/env']
         }))
+        .pipe(uglify())
         .pipe(sourcemaps.write())
-        .pipe(dest('dist'));
+        .pipe(dest('dist/js'));
 })
+
 
 task('server', () => {
     browserSync.init({
@@ -65,10 +77,9 @@ task('server', () => {
     });
 });
 
-watch('beats/scss/**/*.scss', series('styles'));
+watch('scss/**/*.scss', series('styles'));
 watch("*.html", series("copy:html"));
-watch("beats/js/*.js", series("scripts"));
+watch("js/*.js", series("scripts"));
 
-task("default", series("clean", "copy:html", "styles", "scripts","server"));
-
+task("default", series("clean", "copy:html","copy:images","copy:svg", "styles", "scripts","server"));
 

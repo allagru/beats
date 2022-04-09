@@ -13,7 +13,7 @@
         position: absolute;
         bottom: rem(-25px);
         right: 22%;
-        content: url(/beats/src/img/rectangle.png);
+        content: url(../../img/rectangle.png);
     }
 
     &__container {
@@ -22,7 +22,7 @@
         justify-content: space-between;
         height: 100%;
         padding: rem(24px) rem(23px) rem(65px) 0;
-        background: url(/beats/src/img/earph.png) right 5% center no-repeat;
+        background: url(../../img/earph.png) right 5% center no-repeat;
 
         @include tablets {
             background: none;
@@ -49,7 +49,7 @@
                 content: '';
                 width: rem(323px);
                 height: rem(323px);
-                background: url('/beats/src/img/earph.png') center center / contain no-repeat;
+                background: url('../../img/earph.png') center center / contain no-repeat;
                 margin-bottom: rem(68px);
 
                 @include tablets {
